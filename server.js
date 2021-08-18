@@ -1,5 +1,5 @@
 const express = require("express");
-
+const path = require('path');
 const mongoose = require("mongoose");
 
 const DeveloperRouter = require("./routes/api/developer");
@@ -16,7 +16,7 @@ app.use(cors());
 app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname,"client/build")));
+  app.use(express.static(path.join(__dirname, "/client/build")));
 
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
