@@ -29,10 +29,6 @@ if (process.env.NODE_ENV === "production") {
 
 
 // Add routes, both API and view
-// app.use(DeveloperRouter);
-app.use('/developer', DeveloperRouter);
-app.use('/project', ProjectRouter);
-// app.use(require("./routes/api/employee"));
 
 
 // Connect to the Mongo DB
@@ -45,6 +41,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project33",
   
 }
 );
+// app.use(DeveloperRouter);
+app.use('/developer', DeveloperRouter);
+app.use('/project', ProjectRouter);
+// app.use(require("./routes/api/employee"));
 
 // Start the API server
 app.listen(PORT, function() {
