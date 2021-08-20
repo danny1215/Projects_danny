@@ -33,12 +33,12 @@ to save the budgets we submited to mango database while we are working online, b
 
 ## LINK TO THE REPOSITORY
 
-- The link is [Projects_management_2](https://github.com/danny1215/Danny-budget-Trackers)
+- The link is [Projects_management_2](https://github.com/danny1215/Projects_management_2)
 
 ## LINK TO THE Deployed link
 
 
-- https://pure-river-76451.herokuapp.com/
+- 
 
 ## SCREENSHOTS
 
