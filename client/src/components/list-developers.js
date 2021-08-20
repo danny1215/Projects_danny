@@ -42,14 +42,15 @@ export default class DeveloperList extends Component {
     render() {
         return (
             <div>
-                <h3>Developer List</h3>
-                <table className="table table-striped" style={{ marginTop: 20 }} >
+                <h3 style={{ marginTop: 100 }}>Developer List</h3>
+                <table className="table table-striped" style={{ marginTop: 100 }} >
                     <thead>
                         <tr>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Developer Role</th>
-                            <th>Action</th>
+                            <th>EDIT</th>
+                            <th>DELETE</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -3,11 +3,32 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url(https://cdn.pixabay.com/photo/2015/07/17/22/44/student-849828_1280.jpg); */
+  /* background-image: url(https://cdn.pixabay.com/photo/2013/06/09/09/07/explosion-123690_1280.jpg); */
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v462-n-130-textureidea_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9465282a2b0a375f4f5b120d7bbad882);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h3{
+  color: aliceblue;
+  
+}
+
+th, a, td{
+  color: aliceblue;
+}
+
+label{
+  color: aliceblue;
+}
+
+form{
+  box-sizing: border-box;
+  
 }

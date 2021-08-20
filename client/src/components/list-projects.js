@@ -43,8 +43,8 @@ export default class ProjectList extends Component {
     render() {
         return (
             <div>
-                <h3>Project List</h3>
-                <table className="table table-striped" style={{ marginTop: 20 }} >
+                <h3 style={{ marginTop: 100 }}>Project List</h3>
+                <table className="table table-striped" style={{ marginTop: 100 }} >
                     <thead>
                         <tr>
                             <th>Project Name </th>

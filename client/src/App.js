@@ -11,6 +11,7 @@ import ListProjects from "./components/list-projects";
 import DeleteDevelopers from "./components/delete-developers";
 import EditProjects from "./components/edit-projects";
 import DeleteProjects from "./components/delete-projects";
+import footer from "./components/footer";
 
 // import logo from "./logo.png";
 

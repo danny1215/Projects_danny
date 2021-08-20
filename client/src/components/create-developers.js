@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, } from 'react';
 import axios from 'axios';
 
 export default class CreateDevelopers extends Component {
@@ -55,7 +55,7 @@ export default class CreateDevelopers extends Component {
         axios.post('http://localhost:3001/developer/add', newDeveloper)
             .then(res => console.log(res.data));
 
-
+            this.props.history.push('/');
         this.setState({
             DeveFirst_Name: '',
             DeveLast_name: '',
@@ -66,13 +66,14 @@ export default class CreateDevelopers extends Component {
 
     render() {
         return (
-            <div style={{marginTop: 10}}>
+            <div style={{marginTop: 100}}>
                 <h3>Create Developers</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 
                         <label>First_Name: </label>
                         <input  type="text"
                                 className="form-control"
+                                placeholder="First_Name"
                                 value={this.state.DeveFirst_Name}
                                 onChange={this.onChangeDeveFirst_Name}
                                 />
@@ -82,6 +83,7 @@ export default class CreateDevelopers extends Component {
                         <input 
                                 type="text" 
                                 className="form-control"
+                                placeholder="Last_Name"
                                 value={this.state.DeveLast_name}
                                 onChange={this.onChangeDeveLast_name}
                                 />

@@ -62,7 +62,7 @@ export default class CreateProjects extends Component {
 
         axios.post('http://localhost:3001/project/add', newProject)
             .then(res => console.log(res.data));
-
+            this.props.history.push('/project');
 
         this.setState({
             Project_Name: '',
@@ -75,7 +75,7 @@ export default class CreateProjects extends Component {
 
     render() {
         return (
-            <div style={{marginTop: 10}}>
+            <div style={{marginTop: 80}}>
                 <h3>Create projects</h3>
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group">
@@ -83,6 +83,7 @@ export default class CreateProjects extends Component {
                         <input 
                                 type="text" 
                                 className="form-control"
+                                placeholder="Project_Name"
                                 value={this.state.Project_Name}
                                 onChange={this.onChangeProject_Name}
                                 />
@@ -91,6 +92,7 @@ export default class CreateProjects extends Component {
                         <label>First_Name: </label>
                         <input  type="text"
                                 className="form-control"
+                                placeholder="First_Name"
                                 value={this.state.DeveFirst_Name}
                                 onChange={this.onChangeDeveFirst_Name}
                                 />
@@ -100,6 +102,7 @@ export default class CreateProjects extends Component {
                         <label>Project_Detail: </label>
                         <input  type="text"
                                 className="form-control"
+                                placeholder="Project_Detail"
                                 value={this.state.Project_Detail}
                                 onChange={this.onChangeProject_Detail}
                                 />
