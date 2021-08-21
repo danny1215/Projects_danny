@@ -51,7 +51,8 @@ export default class ProjectList extends Component {
                             <th>DeveFirst Name</th>
                             <th>Project_Detail</th>
                             <th>Developer Role</th>
-                            <th>Action</th>
+                            <th>EDIT</th>
+                            <th>DELETE</th>
                         </tr>
                     </thead>
                     <tbody>
