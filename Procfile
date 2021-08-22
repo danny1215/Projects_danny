@@ -1,1 +1,1 @@
-web: start:prod;
+web: node server.js;
