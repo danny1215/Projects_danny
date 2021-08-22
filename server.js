@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
 } else{
   app.get("/", (req, res) =>{
@@ -29,7 +29,9 @@ if (process.env.NODE_ENV === "production") {
 
 
 // Add routes, both API and view
-
+// app.use(DeveloperRouter);
+app.use('/developer', DeveloperRouter);
+app.use('/project', ProjectRouter);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project33",
@@ -42,8 +44,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project33",
 }
 );
 // app.use(DeveloperRouter);
-app.use('/developer', DeveloperRouter);
-app.use('/project', ProjectRouter);
+
 // app.use(require("./routes/api/employee"));
 
 // Start the API server
