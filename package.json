@@ -15,7 +15,7 @@
     "build": "cd client && npm run build",
     "seed": "node scripts/seedDB.js",
     "deploy": "gh-pags -d build",
-     "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
