@@ -2,8 +2,9 @@ const express = require("express");
 const path = require('path');
 const mongoose = require("mongoose");
 
-const DeveloperRouter = require("./routes/api/developer");
-const ProjectRouter = require("./routes/api/project")
+const DeveloperRouter = require("./routes/api/developers");
+const ProjectRouter = require("./routes/api/projects");
+// const Routes = require("./routes")
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -32,9 +33,11 @@ if (process.env.NODE_ENV === "production") {
 // app.use(DeveloperRouter);
 app.use('/developer', DeveloperRouter);
 app.use('/project', ProjectRouter);
+// app.use(Routes)
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project33",
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/project33",
 { 
   useNewUrlParser: true, 
   useUnifiedTopology: true,
