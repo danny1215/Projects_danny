@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
+  
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build","index.html"));
   });
@@ -29,16 +30,18 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
+
+
+
 // Add routes, both API and view
 // app.use(DeveloperRouter);
 app.use('/developer', DeveloperRouter);
 app.use('/project', ProjectRouter);
 // app.use(Routes)
 
-
-
+// Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://danny:danny1234@cluster0.svmel.mongodb.net/project33?retryWrites=true&w=majority",
+  process.env.MONGODB_URI || "mongodb://localhost/project33",
 { 
   useNewUrlParser: true, 
   useUnifiedTopology: true,
@@ -46,6 +49,16 @@ mongoose.connect(
   useFindAndModify: false,
   
 }
+
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb+srv://danny:danny1234@cluster0.svmel.mongodb.net/project33?retryWrites=true&w=majority",
+// { 
+//   useNewUrlParser: true, 
+//   useUnifiedTopology: true,
+//   useCreateIndex: true,
+//   useFindAndModify: false,
+  
+// }
 
 );
 // app.use(DeveloperRouter);
