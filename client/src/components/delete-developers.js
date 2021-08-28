@@ -21,7 +21,7 @@ export default class DeleteDeveloper extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/developer/'+this.props.match.params.id)
+        axios.get('/developer/delete/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     DeveFirst_Name: response.data.DeveFirst_Name,
@@ -70,7 +70,7 @@ export default class DeleteDeveloper extends Component {
             Job_completed: this.state.Job_completed
         };
         console.log(obj);
-        axios.delete('http://localhost:3001/developer/delete/'+this.props.match.params.id, obj)
+        axios.post('/developer/delete/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
         this.props.history.push('/');

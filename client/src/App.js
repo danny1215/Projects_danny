@@ -11,7 +11,7 @@ import ListProjects from "./components/list-projects";
 import DeleteDevelopers from "./components/delete-developers";
 import EditProjects from "./components/edit-projects";
 import DeleteProjects from "./components/delete-projects";
-import footer from "./components/footer";
+// import footer from "./components/footer";
 
 // import logo from "./logo.png";
 
@@ -21,9 +21,9 @@ class App extends Component {
       <Router>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light" bg="transparent" expand="lg">
-            <a className="navbar-brand" href="" target="_blank">
-              {/* <img src={logo} width="30" height="30" alt="" /> */}
-            </a>
+            {/* <a className="navbar-brand" href="" target="_blank">
+              <img src={logo} width="30" height="30" alt="" />
+            </a> */}
             <Link to="/" className="navbar-brand">PROJECT-MANAGEMENT</Link>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">

@@ -52,7 +52,7 @@ export default class CreateDevelopers extends Component {
             Job_completed: this.state.Job_completed
         };
 
-        axios.post('http://localhost:3001/developer/add', newDeveloper)
+        axios.post('/developer/add', newDeveloper)
             .then(res => console.log(res.data));
 
             this.props.history.push('/');

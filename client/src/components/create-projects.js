@@ -60,7 +60,7 @@ export default class CreateProjects extends Component {
             Job_completed: this.state.Job_completed
         };
 
-        axios.post('http://localhost:3001/project/add', newProject)
+        axios.post('/project/add', newProject)
             .then(res => console.log(res.data));
             this.props.history.push('/project');
 

@@ -40,20 +40,8 @@ app.use('/project', ProjectRouter);
 // app.use(Routes)
 
 // Connect to the Mongo DB
-// mongoose.connect(
-//   process.env.MONGODB_URI || "mongodb://localhost/project33",
-// { 
-//   useNewUrlParser: true, 
-//   useUnifiedTopology: true,
-//   useCreateIndex: true,
-//   useFindAndModify: false,
-  
-// }
-
-
-
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://danny:danny1234@cluster0.svmel.mongodb.net/project33?retryWrites=true&w=majority",
+  process.env.MONGODB_URI || "mongodb://localhost/project33",
 { 
   useNewUrlParser: true, 
   useUnifiedTopology: true,
@@ -61,6 +49,18 @@ mongoose.connect(
   useFindAndModify: false,
   
 }
+
+
+
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb+srv://danny:danny1234@cluster0.svmel.mongodb.net/project33?retryWrites=true&w=majority",
+// { 
+//   useNewUrlParser: true, 
+//   useUnifiedTopology: true,
+//   useCreateIndex: true,
+//   useFindAndModify: false,
+  
+// }
 
 );
 // app.use(DeveloperRouter);

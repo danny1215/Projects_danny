@@ -24,7 +24,7 @@ projectRoutes.route('/').get(function(req, res) {
 });
 
 
-projectRoutes.route('/:id').get(function(req, res) {
+projectRoutes.route('/update/:id').get(function(req, res) {
     let id = req.params.id;
     ProjectModel.findById(id, function(err, project) {
         res.json(project);
@@ -44,7 +44,7 @@ projectRoutes.route('/add').post(function(req, res) {
 
 
 
-  projectRoutes.route("/delete/:id").delete(function(req, res)  {
+  projectRoutes.route("/delete/:id").get(function(req, res)  {
     ProjectModel.findByIdAndRemove(req.params.id, function(err, project) {
         if (!project)
         

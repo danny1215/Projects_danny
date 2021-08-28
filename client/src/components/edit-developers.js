@@ -21,7 +21,7 @@ export default class EditDeveloper extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/developer/'+this.props.match.params.id)
+        axios.get('/developer/update/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     DeveFirst_Name: response.data.DeveFirst_Name,
@@ -73,7 +73,7 @@ export default class EditDeveloper extends Component {
             Job_completed: this.state.Job_completed
         };
         console.log(obj);
-        axios.post('http://localhost:3001/developer/update/'+this.props.match.params.id, obj)
+        axios.post('/developer/update/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
         this.props.history.push('/');

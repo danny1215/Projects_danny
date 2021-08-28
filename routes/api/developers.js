@@ -16,7 +16,7 @@ developerRoutes.route('/').get(function(req, res) {
 });
 
 
-developerRoutes.route('/:id').get(function(req, res) {
+developerRoutes.route('/update/:id').get(function(req, res) {
   let id = req.params.id;
   DeveloperModel.findById(id, function(err, developer) {
       res.json(developer);
@@ -24,6 +24,17 @@ developerRoutes.route('/:id').get(function(req, res) {
 });
 
 
+developerRoutes.route('/add').post(function(req, res) {
+    let developer = new DeveloperModel(req.body);
+    developer.save()
+        .then(developer => {
+            res.status(200).json({'developer': 'developer added successfully'});
+        })
+        .catch(err => {
+            res.status(400).send('adding new developer failed');
+        });
+  });
+  
 
 developerRoutes.route('/update/:id').post(function(req, res) {
   DeveloperModel.findById(req.params.id, function(err, developer) {
@@ -48,7 +59,7 @@ developerRoutes.route('/update/:id').post(function(req, res) {
 
 
 
-developerRoutes.route("/delete/:id").delete(function(req, res)  {
+developerRoutes.route('/delete/:id').get(function(req, res)  {
     DeveloperModel.findByIdAndRemove(req.params.id, function(err, developer) {
         if (!developer)
         
@@ -65,16 +76,6 @@ developerRoutes.route("/delete/:id").delete(function(req, res)  {
   });
 
 
-developerRoutes.route('/add').post(function(req, res) {
-  let developer = new DeveloperModel(req.body);
-  developer.save()
-      .then(developer => {
-          res.status(200).json({'developer': 'developer added successfully'});
-      })
-      .catch(err => {
-          res.status(400).send('adding new developer failed');
-      });
-});
 
 
 

@@ -23,7 +23,7 @@ export default class DeleteProject extends Component {
     }
 
         componentDidMount() {
-            axios.get('http://localhost:3001/project/'+this.props.match.params.id)
+            axios.get('/project/delete/'+this.props.match.params.id)
                 .then(response => {
                     this.setState({
                         Project_Name: response.data.Project_Name,
@@ -83,7 +83,7 @@ export default class DeleteProject extends Component {
             Job_completed: this.state.Job_completed
         };
         console.log(obj);
-        axios.delete('http://localhost:3001/project/delete/'+this.props.match.params.id, obj)
+        axios.post('/project/delete'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
         this.props.history.push('/project');
