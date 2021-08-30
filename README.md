@@ -18,7 +18,7 @@ This Application can be used by clonning it, open in command prompt or bash, or 
 ### Technologies Used
 
 - Node.js
-- mongo database
+- mongo databasee
 - mongoose
 - express
 - robo 3T
