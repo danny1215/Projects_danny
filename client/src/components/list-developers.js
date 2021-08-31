@@ -24,7 +24,7 @@ export default class DeveloperList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/developer/')
+        axios.get('/developer')
             .then(response => {
                 this.setState({ developer: response.data });
             })

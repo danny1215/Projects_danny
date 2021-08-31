@@ -83,7 +83,7 @@ export default class DeleteProject extends Component {
             Job_completed: this.state.Job_completed
         };
         console.log(obj);
-        axios.post('/project/delete'+this.props.match.params.id, obj)
+        axios.post('/project/delete/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
         this.props.history.push('/project');
