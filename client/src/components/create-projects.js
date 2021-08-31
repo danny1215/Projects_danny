@@ -62,6 +62,7 @@ export default class CreateProjects extends Component {
 
         axios.post('/project/add', newProject)
             .then(res => console.log(res.data));
+            
             this.props.history.push('/project');
 
         this.setState({
