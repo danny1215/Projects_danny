@@ -16,19 +16,23 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/build")));
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "client/build")));
 
   
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build","index.html"));
-  });
-} else{
-  app.get("/", (req, res) =>{
-    res.send("api running");
-  })
-}
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "./client/build","index.html"));
+//   });
+// } else{
+//   app.get("/", (req, res) =>{
+//     res.send("api running");
+//   })
+// }
 
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 
 
