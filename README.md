@@ -55,3 +55,6 @@ This Application can be used by clonning it, open in command prompt or bash, or 
 
 
 <img width="1440" alt="Screen Shot 2021-08-20 at 6 06 56 PM" src="https://user-images.githubusercontent.com/59859358/130299359-e6171903-550e-4dd1-97d9-8910dc66566b.png">
+
+
+<img width="1133" alt="Screen Shot 2022-02-21 at 11 22 18 AM" src="https://user-images.githubusercontent.com/59859358/154994627-8819ca11-d170-4b4d-86db-2f0d1e648f15.png">
