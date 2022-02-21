@@ -21,7 +21,7 @@ export default class DeleteDeveloper extends Component {
     }
 
     componentDidMount() {
-        axios.get('/developer/delete/'+this.props.match.params.id)
+        axios.get('/developer/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     DeveFirst_Name: response.data.DeveFirst_Name,

@@ -33,3 +33,7 @@ form{
   box-sizing: border-box;
   
 }
+
+a.nav-link {
+text-decoration-color: blue;
+}

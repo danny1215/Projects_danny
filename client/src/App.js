@@ -21,14 +21,14 @@ class App extends Component {
       <Router>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light" bg="transparent" expand="lg">
-            {/* <a className="navbar-brand" href="" target="_blank">
-              <img src={logo} width="30" height="30" alt="" />
-            </a> */}
+            <a className="navbar-brand" href="" target="_blank">
+              {/* <img src={logo} width="30" height="30" alt="" /> */}
+            </a>
             <Link to="/" className="navbar-brand">PROJECT-MANAGEMENT</Link>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">DEVELOPERS</Link>
+                  <Link to="/" className="nav-link">DEVELOPERS </Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/create" className="nav-link">CREATE DEVELOPERS</Link>
